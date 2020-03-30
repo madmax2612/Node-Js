@@ -1,6 +1,7 @@
 const express=require('express');
 const morgan=require('morgan');
-const product =require('./routes/posts')
+// const product =require('./routes/posts')
+const student=require('./routes/student')
 const bodyParser = require('body-parser');
 const mongoose=require('mongoose');
 
@@ -20,7 +21,8 @@ app.use(morgan('dev'))
 // app.use('/',postRoutes)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
-app.use('/product',product)
+// app.use('/product',product)
+app.use('/student',student)
 
 const port =process.env.PORT || 8001;
 app.listen(port,()=>{

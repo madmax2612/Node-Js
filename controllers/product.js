@@ -1,9 +1,10 @@
 const Product =require('../Models/index');
 
 
-exports.test=(req,res)=>{
-res.send("Hello Here I am")
-}
+// exports.test=(req,res)=>{
+// res.send("Hello Here I am")
+// }
+
 exports.product_create=(req,res)=>{
 let product= new Product(
     {
